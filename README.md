@@ -2,7 +2,7 @@
 
 > A comprehensive guide to understanding DevOps culture, practices, and foundational infrastructure concepts
 
-[![DevOps](https://img.shields.io/badge/DevOps-Basics-blue.svg)](https://github.com)
+[![DevOps](https://img.shields.io/badge/DevOps-Basics-blue.svg)](https://github.com/shehzad78675/DevOps-Learning)
 
 ---
 

@@ -2,7 +2,7 @@
 
 > A comprehensive guide to understanding DevOps culture, practices, and foundational infrastructure concepts
 
-[![DevOps](https://img.shields.io/badge/DevOps-Basics-blue.svg)](https://github.com/shehzad78675/DevOps-Learning)
+[![DevOps](https://img.shields.io/badge/DevOps-Basics-blue.svg)](https://github.com)
 
 ---
 
@@ -46,6 +46,8 @@ DevOps emphasizes:
 
 Organizations that adopt DevOps practices experience significant benefits:
 
+<div align="center">
+
 | Benefit | Impact |
 |---------|--------|
 | ⚡ **Faster Delivery** | Deploy features and updates multiple times per day |
@@ -54,6 +56,8 @@ Organizations that adopt DevOps practices experience significant benefits:
 | 🔄 **Quick Recovery** | Faster rollback and recovery mechanisms |
 | 📊 **Better Visibility** | Real-time monitoring provides instant feedback |
 | 💰 **Cost Efficiency** | Automation reduces manual overhead and operational costs |
+
+</div>
 
 ### Real-World Impact
 
@@ -167,6 +171,8 @@ Runs on top of a conventional operating system.
 
 ### VMs vs Containers
 
+<div align="center">
+
 | Feature | Virtual Machines | Containers |
 |---------|-----------------|------------|
 | **Isolation** | Complete OS isolation | Process-level isolation |
@@ -174,6 +180,8 @@ Runs on top of a conventional operating system.
 | **Startup Time** | Minutes | Seconds |
 | **Resource Usage** | Higher overhead | Lightweight |
 | **Use Case** | Running different OSes | Microservices, rapid deployment |
+
+</div>
 
 ---
 
@@ -237,7 +245,6 @@ Contributions are welcome! If you'd like to add more content or improve this gui
 6. Open a Pull Request
 
 ---
-
 
 ## ⭐ Support
 

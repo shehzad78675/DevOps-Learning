@@ -4,7 +4,6 @@
 
 [![Linux](https://img.shields.io/badge/Linux-Commands-yellow.svg)](https://github.com)
 [![Shell](https://img.shields.io/badge/Shell-Bash-green.svg)](https://github.com)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ---
 
@@ -3321,12 +3320,6 @@ Found an error or want to add more commands? Contributions are welcome!
 3. Commit your changes (`git commit -am 'Add new commands'`)
 4. Push to the branch (`git push origin feature/new-commands`)
 5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 

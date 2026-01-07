@@ -194,12 +194,16 @@ date | echo "today is"
 
 </div>
 
+<div align="center">
+
 | Step | What Happens                                         | Stream                         |
 | ---- | ---------------------------------------------------- | ------------------------------ | ------- |
 | 1️⃣   | `date` outputs: `Tue Jan 6 14:30:00 UTC 2026`        | stdout                         |
 | 2️⃣   | Pipe `                                               | ` sends output to next command | stdin → |
 | 3️⃣   | `echo` **doesn't read stdin**, only prints arguments | ignored                        |
 | 4️⃣   | Result: Only "today is" appears                      | stdout                         |
+
+</div>
 
 ### ✅ The Correct Ways
 
@@ -333,6 +337,8 @@ fi
 
 </div>
 
+<div align="center">
+
 | Operator | Meaning               | Example         |
 | -------- | --------------------- | --------------- |
 | `-eq`    | Equal to              | `[ $a -eq $b ]` |
@@ -341,6 +347,8 @@ fi
 | `-lt`    | Less than             | `[ $a -lt $b ]` |
 | `-ge`    | Greater than or equal | `[ $a -ge $b ]` |
 | `-le`    | Less than or equal    | `[ $a -le $b ]` |
+
+</div>
 
 ```bash
 # Examples
@@ -365,6 +373,8 @@ fi
 
 </div>
 
+<div align="center">
+
 | Operator    | Meaning                       | Example             |
 | ----------- | ----------------------------- | ------------------- |
 | `=` or `==` | Equal                         | `[ "$a" = "$b" ]`   |
@@ -373,6 +383,8 @@ fi
 | `>`         | Greater than (alphabetically) | `[[ "$a" > "$b" ]]` |
 | `-z`        | String is empty               | `[ -z "$str" ]`     |
 | `-n`        | String is not empty           | `[ -n "$str" ]`     |
+
+</div>
 
 ```bash
 # Examples
@@ -400,6 +412,8 @@ fi
 
 </div>
 
+<div align="center">
+
 | Operator          | Test                   | Example            |
 | ----------------- | ---------------------- | ------------------ |
 | `-e`              | File exists            | `[ -e file.txt ]`  |
@@ -414,6 +428,8 @@ fi
 | `-c`              | Is a character device  | `[ -c /dev/tty ]`  |
 | `file1 -nt file2` | file1 newer than file2 | `[ f1 -nt f2 ]`    |
 | `file1 -ot file2` | file1 older than file2 | `[ f1 -ot f2 ]`    |
+
+</div>
 
 ```bash
 # Examples
@@ -2765,8 +2781,6 @@ echo "════════════════════════�
 
 ### 🌟 May the Source Be With You! 🌟
 
-**[⬆ Back to Top](#-complete-bash-scripting-mastery-guide)**
-
 ---
 
 <sub>Built with 🧡 by developers, for developers</sub>
@@ -2805,6 +2819,8 @@ _This isn't goodbye, it's "see you in the terminal!" 😉_
 <div align="center">
 
 **Version 1.0.0** | **January 2026** | **Made for the Community**
+
+**[⬆ Back to Top](#-complete-bash-scripting-mastery-guide)**
 
 </div>
 

@@ -44,9 +44,9 @@
 
 ## 🚀 Getting Started
 
-### Prerequisites
-
 </div>
+
+### Prerequisites
 
 ```bash
 # Check Bash version
@@ -62,11 +62,7 @@ chmod +x script.sh
 bash script.sh
 ```
 
-<div align="center">
-
 ### 📁 Basic Script Structure
-
-</div>
 
 ```bash
 #!/bin/bash
@@ -89,9 +85,9 @@ echo "Hello, World!"
 
 ## 🔍 Debug Mode & Script Safety
 
-### _The Three Essential Set Commands_
-
 </div>
+
+### _The Three Essential Set Commands_
 
 ```bash
 #!/bin/bash

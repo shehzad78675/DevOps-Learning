@@ -333,9 +333,9 @@ fi
 
 ### 📊 Comparison Operators
 
-#### Numeric Comparisons
-
 </div>
+
+#### Numeric Comparisons
 
 <div align="center">
 
@@ -367,11 +367,7 @@ if [ $age -lt 65 ]; then
 fi
 ```
 
-<div align="center">
-
 #### String Comparisons
-
-</div>
 
 <div align="center">
 
@@ -406,11 +402,7 @@ if [ -n "${VAR:-}" ]; then
 fi
 ```
 
-<div align="center">
-
 #### File Test Operators
-
-</div>
 
 <div align="center">
 
@@ -2310,9 +2302,9 @@ main "$@"
 
 </div>
 
-<div align="center">
-
 ### 🔧 Debugging
+
+<div align="center">
 
 | Command                | Description              |
 | ---------------------- | ------------------------ |
@@ -2325,9 +2317,9 @@ main "$@"
 
 </div>
 
-<div align="center">
-
 ### 📊 Exit Codes
+
+<div align="center">
 
 | Code    | Meaning                     |
 | ------- | --------------------------- |
@@ -2350,9 +2342,10 @@ echo $?
 exit 0    # Success
 exit 1    # Error
 ```
-<div align="center">
 
 ### 🔤 Variables
+
+<div align="center">
 
 | Syntax            | Description                   |
 | ----------------- | ----------------------------- |
@@ -2375,11 +2368,7 @@ exit 1    # Error
 
 </div>
 
-<div align="center">
-
 ### 🔢 Arithmetic
-
-</div>
 
 ```bash
 # Basic operations
@@ -2403,9 +2392,9 @@ $((a ** b))         # Power
 ((var /= 2))        # Divide and assign
 ```
 
-<div align="center">
-
 ### 🎨 Special Variables
+
+<div align="center">
 
 | Variable        | Description                        |
 | --------------- | ---------------------------------- |
@@ -2427,11 +2416,7 @@ $((a ** b))         # Power
 
 </div>
 
-<div align="center">
-
 ### 📝 String Operations
-
-</div>
 
 ```bash
 # Length
@@ -2460,11 +2445,7 @@ ${string,}           # First char lowercase
 ${string,,}          # All lowercase
 ```
 
-<div align="center">
-
 ### 🔀 Redirections
-
-</div>
 
 ```bash
 command > file              # Redirect stdout to file

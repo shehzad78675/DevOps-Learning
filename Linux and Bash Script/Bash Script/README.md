@@ -196,12 +196,12 @@ date | echo "today is"
 
 <div align="center">
 
-| Step | What Happens                                         | Stream                         |
+| Step | What Happens                                         | Stream                         |         |
 | ---- | ---------------------------------------------------- | ------------------------------ | ------- |
-| 1️⃣   | `date` outputs: `Tue Jan 6 14:30:00 UTC 2026`        | stdout                         |
+| 1️⃣   | `date` outputs: `Tue Jan 6 14:30:00 UTC 2026`        | stdout                         |         |
 | 2️⃣   | Pipe `                                               | ` sends output to next command | stdin → |
-| 3️⃣   | `echo` **doesn't read stdin**, only prints arguments | ignored                        |
-| 4️⃣   | Result: Only "today is" appears                      | stdout                         |
+| 3️⃣   | `echo` **doesn't read stdin**, only prints arguments | ignored                        |         |
+| 4️⃣   | Result: Only "today is" appears                      | stdout                         |         |
 
 </div>
 

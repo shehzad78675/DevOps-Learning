@@ -2592,63 +2592,9 @@ for f in *\ *; do mv "$f" "${f// /_}"; done
 
 <div align="center">
 
-## 🤝 Contributing
-
-We welcome contributions! Here's how you can help:
-
-</div>
-
-1. 🐛 **Report bugs** - Open an issue
-2. 💡 **Suggest features** - Share your ideas
-3. 📝 **Improve documentation** - Fix typos, add examples
-4. 🔧 **Submit pull requests** - Add new scripts or improvements
-
----
-
-<div align="center">
-
-### Code Style Guidelines
-
-</div>
-
-- Use 4 spaces for indentation
-- Follow the structure shown in this guide
-- Add comments for complex logic
-- Include error handling
-- Test your scripts before submitting
-
----
-
-## ⭐ Show Your Support
-
-If you found this guide helpful, please consider:
-
-- ⭐ **Starring** the repository
-- 🐦 **Sharing** with others
-- 💬 **Providing feedback**
-- 🤝 **Contributing** improvements
-
----
-
-### 🎉 Happy Scripting!
-
-_Made with ❤️ for the Bash community_
-
-**[⬆ Back to Top](#-complete-bash-scripting-mastery-guide)**
-
----
-
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg" width="100" alt="Bash">
-
-### 📧 Questions?
-
-Feel free to reach out or open an issue!
-
-**Last Updated**: January 2026
-
----
-
 ## 💭 Final Thoughts
+
+</div>
 
 Bash scripting is a journey, not a destination. Every script you write teaches you something new. Don't be discouraged if things don't work perfectly the first time - even experienced developers spend time debugging their scripts!
 
@@ -2728,6 +2674,50 @@ May your scripts always execute successfully, your pipes never break, and your e
 
 <div align="center">
 
+## 🤝 Contributing
+
+</div>
+
+We welcome contributions! Here's how you can help:
+
+1. 🐛 **Report bugs** - Open an issue
+2. 💡 **Suggest features** - Share your ideas
+3. 📝 **Improve documentation** - Fix typos, add examples
+4. 🔧 **Submit pull requests** - Add new scripts or improvements
+
+---
+
+<div align="center">
+
+### Code Style Guidelines
+
+</div>
+
+- Use 4 spaces for indentation
+- Follow the structure shown in this guide
+- Add comments for complex logic
+- Include error handling
+- Test your scripts before submitting
+
+---
+
+<div align="center">
+
+## ⭐ Show Your Support
+
+</div>
+
+If you found this guide helpful, please consider:
+
+- ⭐ **Starring** the repository
+- 🐦 **Sharing** with others
+- 💬 **Providing feedback**
+- 🤝 **Contributing** improvements
+
+---
+
+<div align="center">
+
 ### ✍️ Author's Note
 
 _"The command line is not just a tool; it's a superpower. With Bash scripting, you're not just using your computer - you're commanding it. May this guide empower you to automate the tedious, simplify the complex, and create the extraordinary."_
@@ -2771,23 +2761,6 @@ echo "════════════════════════�
 
 ---
 
-```bash
-# The journey of a thousand scripts begins with a single line
-echo "#!/bin/bash"
-
-# Now go write yours! 🚀
-```
-
-<div align="center">
-
-### 🎭 The End... or Rather, The Beginning!
-
-_This isn't goodbye, it's "see you in the terminal!" 😉_
-
-</div>
-
----
-
 <div align="center">
 
 ### 🌟 May the Source Be With You! 🌟
@@ -2812,31 +2785,30 @@ _This isn't goodbye, it's "see you in the terminal!" 😉_
 
 ---
 
+```bash
+# The journey of a thousand scripts begins with a single line
+echo "#!/bin/bash"
+
+# Now go write yours! 🚀
+```
+
+<div align="center">
+
+### 🎭 The End... or Rather, The Beginning!
+
+_This isn't goodbye, it's "see you in the terminal!" 😉_
+
+</div>
+
+---
+
 <div align="center">
 
 **Version 1.0.0** | **January 2026** | **Made for the Community**
 
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div> BACKUP_DIR="/backup"
+<!-- </div> BACKUP_DIR="/backup"
 readonly SOURCE_DIR="/home/user/documents"
 readonly LOG_FILE="/var/log/backup.log"
 readonly DATE=$(date +%Y%m%d_%H%M%S)
@@ -2941,3 +2913,4 @@ set -euo pipefail
 readonly SCRIPT_NAME=$(basename "$0")
 readonly
 ```
+```` -->

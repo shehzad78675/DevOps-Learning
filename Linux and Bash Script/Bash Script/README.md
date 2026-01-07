@@ -2,20 +2,19 @@
 
 # 🐚 Complete Bash Scripting Mastery Guide
 
-### *From Beginner to Advanced: Master Shell Scripting Like a Pro*
+### _From Beginner to Advanced: Master Shell Scripting Like a Pro_
 
 [![Bash](https://img.shields.io/badge/Bash-5.0+-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg" width="200" alt="Bash Logo">
 
-**[Getting Started](#-getting-started)** • 
-**[Debug Mode](#-debug-mode--script-safety)** • 
-**[Pipes](#-understanding-pipes--stdinstdout)** • 
-**[Conditionals](#-conditional-statements)** • 
-**[Loops](#-loops)** • 
-**[Functions](#-functions)** • 
+**[Getting Started](#-getting-started)** •
+**[Debug Mode](#-debug-mode--script-safety)** •
+**[Pipes](#-understanding-pipes--stdinstdout)** •
+**[Conditionals](#-conditional-statements)** •
+**[Loops](#-loops)** •
+**[Functions](#-functions)** •
 **[Examples](#-complete-script-examples)**
 
 ---
@@ -90,7 +89,7 @@ echo "Hello, World!"
 
 ## 🔍 Debug Mode & Script Safety
 
-### *The Three Essential Set Commands*
+### _The Three Essential Set Commands_
 
 </div>
 
@@ -104,12 +103,12 @@ set -o pipefail  # Return exit status of the last failed command in a pipe
 
 <div align="center">
 
-| Command | Purpose | What It Does |
-|---------|---------|--------------|
-| `set -x` | Debug Mode | Shows every command with `+` prefix before execution |
-| `set -e` | Exit on Error | Stops script immediately on any error |
-| `set -o pipefail` | Pipe Safety | Returns failure status from any command in pipe |
-| `set -u` | Undefined Check | Exits if undefined variable is used |
+| Command           | Purpose         | What It Does                                         |
+| ----------------- | --------------- | ---------------------------------------------------- |
+| `set -x`          | Debug Mode      | Shows every command with `+` prefix before execution |
+| `set -e`          | Exit on Error   | Stops script immediately on any error                |
+| `set -o pipefail` | Pipe Safety     | Returns failure status from any command in pipe      |
+| `set -u`          | Undefined Check | Exits if undefined variable is used                  |
 
 </div>
 
@@ -177,7 +176,7 @@ fi
 
 ## 🔄 Understanding Pipes & Stdin/Stdout
 
-### *The Mystery of Lost Data Solved!*
+### _The Mystery of Lost Data Solved!_
 
 </div>
 
@@ -195,12 +194,12 @@ date | echo "today is"
 
 </div>
 
-| Step | What Happens | Stream |
-|------|-------------|--------|
-| 1️⃣ | `date` outputs: `Tue Jan 6 14:30:00 UTC 2026` | stdout |
-| 2️⃣ | Pipe `|` sends output to next command | stdin → |
-| 3️⃣ | `echo` **doesn't read stdin**, only prints arguments | ignored |
-| 4️⃣ | Result: Only "today is" appears | stdout |
+| Step | What Happens                                         | Stream                         |
+| ---- | ---------------------------------------------------- | ------------------------------ | ------- |
+| 1️⃣   | `date` outputs: `Tue Jan 6 14:30:00 UTC 2026`        | stdout                         |
+| 2️⃣   | Pipe `                                               | ` sends output to next command | stdin → |
+| 3️⃣   | `echo` **doesn't read stdin**, only prints arguments | ignored                        |
+| 4️⃣   | Result: Only "today is" appears                      | stdout                         |
 
 ### ✅ The Correct Ways
 
@@ -292,7 +291,7 @@ echo "Important" | tee important.txt | grep "port"
 
 ## ✅ Conditional Statements
 
-### *Make Decisions in Your Scripts*
+### _Make Decisions in Your Scripts_
 
 </div>
 
@@ -334,14 +333,14 @@ fi
 
 </div>
 
-| Operator | Meaning | Example |
-|----------|---------|---------|
-| `-eq` | Equal to | `[ $a -eq $b ]` |
-| `-ne` | Not equal to | `[ $a -ne $b ]` |
-| `-gt` | Greater than | `[ $a -gt $b ]` |
-| `-lt` | Less than | `[ $a -lt $b ]` |
-| `-ge` | Greater than or equal | `[ $a -ge $b ]` |
-| `-le` | Less than or equal | `[ $a -le $b ]` |
+| Operator | Meaning               | Example         |
+| -------- | --------------------- | --------------- |
+| `-eq`    | Equal to              | `[ $a -eq $b ]` |
+| `-ne`    | Not equal to          | `[ $a -ne $b ]` |
+| `-gt`    | Greater than          | `[ $a -gt $b ]` |
+| `-lt`    | Less than             | `[ $a -lt $b ]` |
+| `-ge`    | Greater than or equal | `[ $a -ge $b ]` |
+| `-le`    | Less than or equal    | `[ $a -le $b ]` |
 
 ```bash
 # Examples
@@ -366,14 +365,14 @@ fi
 
 </div>
 
-| Operator | Meaning | Example |
-|----------|---------|---------|
-| `=` or `==` | Equal | `[ "$a" = "$b" ]` |
-| `!=` | Not equal | `[ "$a" != "$b" ]` |
-| `<` | Less than (alphabetically) | `[[ "$a" < "$b" ]]` |
-| `>` | Greater than (alphabetically) | `[[ "$a" > "$b" ]]` |
-| `-z` | String is empty | `[ -z "$str" ]` |
-| `-n` | String is not empty | `[ -n "$str" ]` |
+| Operator    | Meaning                       | Example             |
+| ----------- | ----------------------------- | ------------------- |
+| `=` or `==` | Equal                         | `[ "$a" = "$b" ]`   |
+| `!=`        | Not equal                     | `[ "$a" != "$b" ]`  |
+| `<`         | Less than (alphabetically)    | `[[ "$a" < "$b" ]]` |
+| `>`         | Greater than (alphabetically) | `[[ "$a" > "$b" ]]` |
+| `-z`        | String is empty               | `[ -z "$str" ]`     |
+| `-n`        | String is not empty           | `[ -n "$str" ]`     |
 
 ```bash
 # Examples
@@ -401,20 +400,20 @@ fi
 
 </div>
 
-| Operator | Test | Example |
-|----------|------|---------|
-| `-e` | File exists | `[ -e file.txt ]` |
-| `-f` | Is a regular file | `[ -f file.txt ]` |
-| `-d` | Is a directory | `[ -d /path ]` |
-| `-s` | File not empty | `[ -s file.txt ]` |
-| `-r` | File is readable | `[ -r file.txt ]` |
-| `-w` | File is writable | `[ -w file.txt ]` |
-| `-x` | File is executable | `[ -x script.sh ]` |
-| `-L` | Is a symbolic link | `[ -L link ]` |
-| `-b` | Is a block device | `[ -b /dev/sda ]` |
-| `-c` | Is a character device | `[ -c /dev/tty ]` |
-| `file1 -nt file2` | file1 newer than file2 | `[ f1 -nt f2 ]` |
-| `file1 -ot file2` | file1 older than file2 | `[ f1 -ot f2 ]` |
+| Operator          | Test                   | Example            |
+| ----------------- | ---------------------- | ------------------ |
+| `-e`              | File exists            | `[ -e file.txt ]`  |
+| `-f`              | Is a regular file      | `[ -f file.txt ]`  |
+| `-d`              | Is a directory         | `[ -d /path ]`     |
+| `-s`              | File not empty         | `[ -s file.txt ]`  |
+| `-r`              | File is readable       | `[ -r file.txt ]`  |
+| `-w`              | File is writable       | `[ -w file.txt ]`  |
+| `-x`              | File is executable     | `[ -x script.sh ]` |
+| `-L`              | Is a symbolic link     | `[ -L link ]`      |
+| `-b`              | Is a block device      | `[ -b /dev/sda ]`  |
+| `-c`              | Is a character device  | `[ -c /dev/tty ]`  |
+| `file1 -nt file2` | file1 newer than file2 | `[ f1 -nt f2 ]`    |
+| `file1 -ot file2` | file1 older than file2 | `[ f1 -ot f2 ]`    |
 
 ```bash
 # Examples
@@ -462,18 +461,18 @@ else
 fi
 ```
 
-### 🆚 Modern Bash: [[ ]] vs [ ]
+### 🆚 Modern Bash: [[]] vs [ ]
 
 <div align="center">
 
-| Feature | `[ ]` (test) | `[[ ]]` (bash) |
-|---------|--------------|----------------|
-| POSIX Compatible | ✅ Yes | ❌ No |
-| Regex Support | ❌ No | ✅ Yes |
-| Pattern Matching | ❌ No | ✅ Yes |
-| Logical Operators | `-a`, `-o` | `&&`, `||` |
+| Feature           | `[ ]` (test)     | `[[ ]]` (bash)     |
+| ----------------- | ---------------- | ------------------ | --- | --- |
+| POSIX Compatible  | ✅ Yes           | ❌ No              |
+| Regex Support     | ❌ No            | ✅ Yes             |
+| Pattern Matching  | ❌ No            | ✅ Yes             |
+| Logical Operators | `-a`, `-o`       | `&&`, `            |     | `   |
 | String Comparison | `<` needs escape | `<` works directly |
-| Word Splitting | ⚠️ Happens | ✅ Prevented |
+| Word Splitting    | ⚠️ Happens       | ✅ Prevented       |
 
 </div>
 
@@ -616,7 +615,7 @@ test -f file.txt && echo "File exists"
 
 ## 🔁 Loops
 
-### *Iterate Like a Pro*
+### _Iterate Like a Pro_
 
 </div>
 
@@ -830,7 +829,7 @@ done
 
 ## 📦 Functions
 
-### *Write Reusable Code*
+### _Write Reusable Code_
 
 </div>
 
@@ -944,7 +943,7 @@ my_function() {
     local local_var="I'm local"
     global_var="Modified global"  # Modifies global
     another_global="New global"   # Creates global
-    
+
     echo "Inside function:"
     echo "  Local: $local_var"
     echo "  Global: $global_var"
@@ -1014,12 +1013,12 @@ echo "5! = $(factorial 5)"
 safe_divide() {
     local a=$1
     local b=$2
-    
+
     if [ $b -eq 0 ]; then
         echo "Error: Division by zero" >&2
         return 1
     fi
-    
+
     echo $((a / b))
     return 0
 }
@@ -1035,7 +1034,7 @@ fi
 
 ## 🔢 Arrays
 
-### *Work with Multiple Values*
+### _Work with Multiple Values_
 
 </div>
 
@@ -1179,7 +1178,7 @@ echo "$joined"  # a,b,c,d
 
 ## 📝 String Manipulation
 
-### *Master Text Processing*
+### _Master Text Processing_
 
 </div>
 
@@ -1266,7 +1265,7 @@ echo "[$result]"
 
 ## 🛡️ Signal Handling with Trap
 
-### *Graceful Error Handling*
+### _Graceful Error Handling_
 
 </div>
 
@@ -1274,16 +1273,16 @@ echo "[$result]"
 
 <div align="center">
 
-| Signal | Number | Description | Can Trap? |
-|--------|--------|-------------|-----------|
-| SIGINT | 2 | Ctrl+C pressed | ✅ Yes |
-| SIGTERM | 15 | Termination request | ✅ Yes |
-| SIGKILL | 9 | Force kill | ❌ No |
-| SIGHUP | 1 | Terminal closed | ✅ Yes |
-| SIGQUIT | 3 | Quit signal | ✅ Yes |
-| EXIT | 0 | Script exit | ✅ Yes |
-| ERR | - | Command error | ✅ Yes |
-| DEBUG | - | Before each command | ✅ Yes |
+| Signal  | Number | Description         | Can Trap? |
+| ------- | ------ | ------------------- | --------- |
+| SIGINT  | 2      | Ctrl+C pressed      | ✅ Yes    |
+| SIGTERM | 15     | Termination request | ✅ Yes    |
+| SIGKILL | 9      | Force kill          | ❌ No     |
+| SIGHUP  | 1      | Terminal closed     | ✅ Yes    |
+| SIGQUIT | 3      | Quit signal         | ✅ Yes    |
+| EXIT    | 0      | Script exit         | ✅ Yes    |
+| ERR     | -      | Command error       | ✅ Yes    |
+| DEBUG   | -      | Before each command | ✅ Yes    |
 
 </div>
 
@@ -1325,11 +1324,11 @@ handle_signal() {
     echo ""
     echo "⚠️  Received signal: $signal"
     echo "🧹 Performing cleanup..."
-    
+
     # Cleanup code
     pkill -P $  # Kill child processes
     rm -rf /tmp/myapp.*
-    
+
     echo "👋 Exiting gracefully..."
     exit 0
 }
@@ -1392,7 +1391,7 @@ trap db_cleanup EXIT
 
 ## 🎨 Colors & Formatting
 
-### *Make Your Scripts Beautiful*
+### _Make Your Scripts Beautiful_
 
 </div>
 
@@ -1460,7 +1459,7 @@ progress_bar() {
     local width=50
     local percentage=$((current * 100 / total))
     local completed=$((width * current / total))
-    
+
     printf "\r["
     printf "%${completed}s" | tr ' ' '='
     printf "%$((width - completed))s" | tr ' ' '-'
@@ -1494,7 +1493,7 @@ box() {
     local text="$1"
     local length=${#text}
     local line=$(printf '%*s' $((length + 4)) '' | tr ' ' '─')
-    
+
     echo "┌${line}┐"
     echo "│  ${text}  │"
     echo "└${line}┘"
@@ -1521,7 +1520,7 @@ tput cnorm  # Show cursor
 
 ## ⚙️ Advanced Features
 
-### *Level Up Your Scripts*
+### _Level Up Your Scripts_
 
 </div>
 
@@ -1772,7 +1771,7 @@ timeout 30s long_running_command
 
 ## 🚀 Complete Script Examples
 
-### *Real-World Production-Ready Scripts*
+### _Real-World Production-Ready Scripts_
 
 </div>
 
@@ -1832,39 +1831,492 @@ main() {
 main "$@"
 ```
 
+### 🔍 Example 2: Log File Analyzer
+
+```bash
+#!/bin/bash
+set -euo pipefail
+
+readonly LOGFILE="${1:-/var/log/app.log}"
+readonly OUTPUT_DIR="./reports"
+readonly REPORT_FILE="${OUTPUT_DIR}/log_report_$(date +%Y%m%d_%H%M%S).txt"
+
+# Colors
+readonly CYAN='\033[0;36m'
+readonly GREEN='\033[0;32m'
+readonly RED='\033[0;31m'
+readonly YELLOW='\033[1;33m'
+readonly BOLD='\033[1m'
+readonly NC='\033[0m'
+
+# Check if log file exists
+if [ ! -f "$LOGFILE" ]; then
+    echo -e "${RED}❌ Error: Log file not found: $LOGFILE${NC}"
+    exit 1
+fi
+
+# Create output directory
+mkdir -p "$OUTPUT_DIR"
+
+# Generate report
+{
+    echo "════════════════════════════════════════"
+    echo "         LOG ANALYSIS REPORT"
+    echo "════════════════════════════════════════"
+    echo "File: $LOGFILE"
+    echo "Generated: $(date '+%Y-%m-%d %H:%M:%S')"
+    echo "════════════════════════════════════════"
+    echo ""
+
+    echo "📊 STATISTICS"
+    echo "────────────────────────────────────────"
+    echo "Total lines:     $(wc -l < "$LOGFILE")"
+    echo "File size:       $(du -h "$LOGFILE" | cut -f1)"
+    echo "ERROR count:     $(grep -c "ERROR" "$LOGFILE" || echo 0)"
+    echo "WARNING count:   $(grep -c "WARNING" "$LOGFILE" || echo 0)"
+    echo "INFO count:      $(grep -c "INFO" "$LOGFILE" || echo 0)"
+    echo ""
+
+    echo "🔴 TOP 10 ERRORS"
+    echo "────────────────────────────────────────"
+    grep "ERROR" "$LOGFILE" | \
+        sed 's/.*ERROR/ERROR/' | \
+        sort | uniq -c | sort -rn | head -10
+    echo ""
+
+    echo "⚠️  TOP 10 WARNINGS"
+    echo "────────────────────────────────────────"
+    grep "WARNING" "$LOGFILE" | \
+        sed 's/.*WARNING/WARNING/' | \
+        sort | uniq -c | sort -rn | head -10
+    echo ""
+
+    echo "📅 ERRORS BY HOUR"
+    echo "────────────────────────────────────────"
+    grep "ERROR" "$LOGFILE" | \
+        grep -oP '\d{2}:\d{2}:\d{2}' | \
+        cut -d: -f1 | \
+        sort | uniq -c | \
+        sort -rn
+    echo ""
+
+    echo "🔍 RECENT ERRORS (Last 5)"
+    echo "────────────────────────────────────────"
+    grep "ERROR" "$LOGFILE" | tail -5
+
+} | tee "$REPORT_FILE"
+
+echo ""
+echo -e "${GREEN}✅ Report saved to: $REPORT_FILE${NC}"
+```
+
+### 🌐 Example 3: Website Monitor
+
+```bash
+#!/bin/bash
+set -euo pipefail
+
+readonly CONFIG_FILE="websites.txt"
+readonly LOG_FILE="monitor.log"
+readonly CHECK_INTERVAL=60
+
+# Colors
+readonly GREEN='\033[0;32m'
+readonly RED='\033[0;31m'
+readonly NC='\033[0m'
+
+log() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG_FILE"
+}
+
+check_website() {
+    local url=$1
+    local response=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "$url")
+    local exit_code=$?
+
+    if [ $exit_code -eq 0 ] && [ "$response" -eq 200 ]; then
+        echo -e "${GREEN}✅${NC} $url - OK (HTTP $response)"
+        log "OK - $url - HTTP $response"
+        return 0
+    else
+        echo -e "${RED}❌${NC} $url - FAILED (HTTP $response, Exit: $exit_code)"
+        log "FAILED - $url - HTTP $response, Exit: $exit_code"
+
+        # Send alert (example using mail)
+        echo "Website $url is down!" | mail -s "Alert: Website Down" admin@example.com
+        return 1
+    fi
+}
+
+main() {
+    if [ ! -f "$CONFIG_FILE" ]; then
+        echo "❌ Config file not found: $CONFIG_FILE"
+        echo "Create a file with one URL per line"
+        exit 1
+    fi
+
+    echo "🔍 Starting website monitor..."
+    echo "📋 Reading websites from: $CONFIG_FILE"
+    echo "⏱️  Check interval: ${CHECK_INTERVAL}s"
+    echo ""
+
+    while true; do
+        echo "────────────────────────────────────────"
+        echo "Checking websites at $(date '+%H:%M:%S')"
+        echo "────────────────────────────────────────"
+
+        while IFS= read -r url || [ -n "$url" ]; do
+            [ -z "$url" ] && continue
+            [[ "$url" =~ ^#  ]] && continue
+
+            check_website "$url"
+        done < "$CONFIG_FILE"
+
+        echo ""
+        sleep "$CHECK_INTERVAL"
+    done
+}
+
+# Handle graceful shutdown
+trap 'echo ""; log "Monitor stopped"; exit 0' SIGINT SIGTERM
+
+main "$@"
+```
+
+### 🗃️ Example 4: Database Backup with Retention
+
+```bash
+#!/bin/bash
+set -euo pipefail
+
+readonly DB_NAME="myapp"
+readonly DB_USER="backup_user"
+readonly DB_PASS="secure_password"
+readonly BACKUP_DIR="/backups/database"
+readonly DATE=$(date +%Y%m%d_%H%M%S)
+readonly BACKUP_FILE="${BACKUP_DIR}/${DB_NAME}_${DATE}.sql.gz"
+readonly RETENTION_DAYS=30
+
+# S3 Configuration (optional)
+readonly S3_BUCKET="s3://my-backups/database"
+readonly ENABLE_S3_UPLOAD=true
+
+log() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*"
+}
+
+error_exit() {
+    echo "❌ ERROR: $1" >&2
+    exit 1
+}
+
+cleanup() {
+    if [ $? -ne 0 ]; then
+        log "Backup failed, cleaning up..."
+        rm -f "$BACKUP_FILE"
+    fi
+}
+
+trap cleanup EXIT
+
+main() {
+    log "Starting database backup for: $DB_NAME"
+
+    # Create backup directory
+    mkdir -p "$BACKUP_DIR"
+
+    # Dump database
+    log "Dumping database..."
+    mysqldump -u"$DB_USER" -p"$DB_PASS" "$DB_NAME" | gzip > "$BACKUP_FILE" || \
+        error_exit "Database dump failed"
+
+    # Check backup size
+    size=$(du -h "$BACKUP_FILE" | cut -f1)
+    log "✅ Backup created: $BACKUP_FILE ($size)"
+
+    # Upload to S3 (if enabled)
+    if [ "$ENABLE_S3_UPLOAD" = true ]; then
+        log "Uploading to S3..."
+        aws s3 cp "$BACKUP_FILE" "$S3_BUCKET/" || \
+            error_exit "S3 upload failed"
+        log "✅ Uploaded to S3"
+    fi
+
+    # Clean old backups
+    log "Cleaning backups older than $RETENTION_DAYS days..."
+    find "$BACKUP_DIR" -name "${DB_NAME}_*.sql.gz" -mtime +$RETENTION_DAYS -delete
+
+    remaining=$(find "$BACKUP_DIR" -name "${DB_NAME}_*.sql.gz" | wc -l)
+    log "✅ Cleanup complete. Remaining backups: $remaining"
+
+    log "🎉 Backup process completed successfully!"
+}
+
+main "$@"
+```
+
+### 📊 Example 5: System Health Check
+
+```bash
+#!/bin/bash
+set -euo pipefail
+
+readonly THRESHOLD_CPU=80
+readonly THRESHOLD_MEM=85
+readonly THRESHOLD_DISK=90
+readonly ALERT_EMAIL="admin@example.com"
+
+# Colors
+readonly GREEN='\033[0;32m'
+readonly YELLOW='\033[1;33m'
+readonly RED='\033[0;31m'
+readonly NC='\033[0m'
+
+check_cpu() {
+    local cpu_usage=$(top -bn1 | grep "Cpu(s)" | awk '{print $2}' | cut -d'%' -f1)
+    local cpu_int=${cpu_usage%.*}
+
+    echo -n "CPU Usage: ${cpu_usage}% "
+
+    if [ "$cpu_int" -gt "$THRESHOLD_CPU" ]; then
+        echo -e "${RED}❌ HIGH${NC}"
+        return 1
+    elif [ "$cpu_int" -gt $((THRESHOLD_CPU - 10)) ]; then
+        echo -e "${YELLOW}⚠️  WARNING${NC}"
+        return 2
+    else
+        echo -e "${GREEN}✅ OK${NC}"
+        return 0
+    fi
+}
+
+check_memory() {
+    local mem_usage=$(free | grep Mem | awk '{printf "%.0f", $3/$2 * 100}')
+
+    echo -n "Memory Usage: ${mem_usage}% "
+
+    if [ "$mem_usage" -gt "$THRESHOLD_MEM" ]; then
+        echo -e "${RED}❌ HIGH${NC}"
+        return 1
+    elif [ "$mem_usage" -gt $((THRESHOLD_MEM - 10)) ]; then
+        echo -e "${YELLOW}⚠️  WARNING${NC}"
+        return 2
+    else
+        echo -e "${GREEN}✅ OK${NC}"
+        return 0
+    fi
+}
+
+check_disk() {
+    local alerts=0
+
+    while IFS= read -r line; do
+        local mountpoint=$(echo "$line" | awk '{print $6}')
+        local usage=$(echo "$line" | awk '{print $5}' | tr -d '%')
+
+        echo -n "Disk $mountpoint: ${usage}% "
+
+        if [ "$usage" -gt "$THRESHOLD_DISK" ]; then
+            echo -e "${RED}❌ HIGH${NC}"
+            ((alerts++))
+        elif [ "$usage" -gt $((THRESHOLD_DISK - 10)) ]; then
+            echo -e "${YELLOW}⚠️  WARNING${NC}"
+        else
+            echo -e "${GREEN}✅ OK${NC}"
+        fi
+    done < <(df -h | grep -vE '^Filesystem|tmpfs|cdrom')
+
+    return $alerts
+}
+
+check_services() {
+    local services=("nginx" "mysql" "redis")
+    local failed=0
+
+    for service in "${services[@]}"; do
+        echo -n "Service $service: "
+        if systemctl is-active --quiet "$service"; then
+            echo -e "${GREEN}✅ Running${NC}"
+        else
+            echo -e "${RED}❌ Stopped${NC}"
+            ((failed++))
+        fi
+    done
+
+    return $failed
+}
+
+send_alert() {
+    local message=$1
+    echo "$message" | mail -s "System Health Alert" "$ALERT_EMAIL"
+}
+
+main() {
+    echo "══════════════════════════════════════"
+    echo "     SYSTEM HEALTH CHECK"
+    echo "══════════════════════════════════════"
+    echo "Time: $(date '+%Y-%m-%d %H:%M:%S')"
+    echo "Host: $(hostname)"
+    echo "══════════════════════════════════════"
+    echo ""
+
+    local issues=0
+
+    check_cpu || ((issues++))
+    check_memory || ((issues++))
+    echo ""
+    check_disk || issues=$((issues + $?))
+    echo ""
+    check_services || issues=$((issues + $?))
+
+    echo ""
+    echo "══════════════════════════════════════"
+    if [ $issues -eq 0 ]; then
+        echo -e "${GREEN}✅ All checks passed!${NC}"
+    else
+        echo -e "${RED}❌ Found $issues issue(s)${NC}"
+        send_alert "System health check found $issues issues. Check the system immediately."
+    fi
+    echo "══════════════════════════════════════"
+}
+
+main "$@"
+```
+
+---
+
+<div align="center">
+
+## 💡 Best Practices
+
+### _Write Production-Ready Scripts_
+
+</div>
+
+### ✅ Essential Best Practices
+
+1. **Always use strict mode**
+
+   ```bash
+   set -euo pipefail
+   ```
+
+2. **Quote your variables**
+
+   ```bash
+   # ❌ Wrong
+   echo $var
+
+   # ✅ Correct
+   echo "$var"
+   ```
+
+3. **Use [[]] for conditions**
+
+   ```bash
+   # ❌ Old style
+   if [ "$var" = "value" ]; then
+
+   # ✅ Modern Bash
+   if [[ "$var" == "value" ]]; then
+   ```
+
+4. **Check command existence**
+
+   ```bash
+   if ! command -v docker &> /dev/null; then
+       echo "Docker not installed"
+       exit 1
+   fi
+   ```
+
+5. **Use functions for organization**
+
+   ```bash
+   main() {
+       # Your main logic
+   }
+
+   main "$@"
+   ```
+
+6. **Always add cleanup traps**
+
+   ```bash
+   cleanup() {
+       rm -f /tmp/myapp.*
+   }
+   trap cleanup EXIT
+   ```
+
+7. **Validate inputs**
+
+   ```bash
+   if [ $# -eq 0 ]; then
+       echo "Usage: $0 <argument>"
+       exit 1
+   fi
+   ```
+
+8. **Use readonly for constants**
+
+   ```bash
+   readonly CONFIG_FILE="/etc/myapp.conf"
+   readonly MAX_RETRIES=3
+   ```
+
+9. **Proper error messages**
+
+   ```bash
+   error() {
+       echo "ERROR: $1" >&2
+       exit 1
+   }
+   ```
+
+10. **Test scripts before deploying**
+
+    ```bash
+    # Syntax check
+    bash -n script.sh
+
+    # Use shellcheck
+    shellcheck script.sh
+    ```
+
 ---
 
 <div align="center">
 
 ## 🎯 Quick Reference
 
-### *Cheat Sheet for Common Operations*
+### _Cheat Sheet for Common Operations_
 
 </div>
 
 ### 🔧 Debugging
 
-| Command | Description |
-|---------|-------------|
-| `set -x` | Enable debug mode |
-| `set +x` | Disable debug mode |
-| `bash -x script.sh` | Run script in debug mode |
-| `bash -n script.sh` | Syntax check only |
-| `shellcheck script.sh` | Lint script |
-| `set -v` | Print shell input lines |
+| Command                | Description              |
+| ---------------------- | ------------------------ |
+| `set -x`               | Enable debug mode        |
+| `set +x`               | Disable debug mode       |
+| `bash -x script.sh`    | Run script in debug mode |
+| `bash -n script.sh`    | Syntax check only        |
+| `shellcheck script.sh` | Lint script              |
+| `set -v`               | Print shell input lines  |
 
 ### 📊 Exit Codes
 
-| Code | Meaning |
-|------|---------|
-| `0` | Success |
-| `1` | General error |
-| `2` | Misuse of shell builtin |
-| `126` | Command cannot execute |
-| `127` | Command not found |
-| `128+n` | Fatal error signal "n" |
-| `130` | Script terminated by Ctrl+C |
-| `255` | Exit status out of range |
+| Code    | Meaning                     |
+| ------- | --------------------------- |
+| `0`     | Success                     |
+| `1`     | General error               |
+| `2`     | Misuse of shell builtin     |
+| `126`   | Command cannot execute      |
+| `127`   | Command not found           |
+| `128+n` | Fatal error signal "n"      |
+| `130`   | Script terminated by Ctrl+C |
+| `255`   | Exit status out of range    |
 
 ```bash
 # Check last command exit status
@@ -1877,24 +2329,24 @@ exit 1    # Error
 
 ### 🔤 Variables
 
-| Syntax | Description |
-|--------|-------------|
-| `${var}` | Variable value |
-| `${var:-default}` | Use default if unset |
-| `${var:=default}` | Set and use default |
-| `${var:?error}` | Error if unset |
-| `${var:+value}` | Use value if set |
-| `${#var}` | Length of variable |
-| `${var#pattern}` | Remove shortest match (start) |
-| `${var##pattern}` | Remove longest match (start) |
-| `${var%pattern}` | Remove shortest match (end) |
-| `${var%%pattern}` | Remove longest match (end) |
-| `${var/old/new}` | Replace first occurrence |
-| `${var//old/new}` | Replace all occurrences |
-| `${var^}` | Uppercase first char |
-| `${var^^}` | Uppercase all |
-| `${var,}` | Lowercase first char |
-| `${var,,}` | Lowercase all |
+| Syntax            | Description                   |
+| ----------------- | ----------------------------- |
+| `${var}`          | Variable value                |
+| `${var:-default}` | Use default if unset          |
+| `${var:=default}` | Set and use default           |
+| `${var:?error}`   | Error if unset                |
+| `${var:+value}`   | Use value if set              |
+| `${#var}`         | Length of variable            |
+| `${var#pattern}`  | Remove shortest match (start) |
+| `${var##pattern}` | Remove longest match (start)  |
+| `${var%pattern}`  | Remove shortest match (end)   |
+| `${var%%pattern}` | Remove longest match (end)    |
+| `${var/old/new}`  | Replace first occurrence      |
+| `${var//old/new}` | Replace all occurrences       |
+| `${var^}`         | Uppercase first char          |
+| `${var^^}`        | Uppercase all                 |
+| `${var,}`         | Lowercase first char          |
+| `${var,,}`        | Lowercase all                 |
 
 ### 🔢 Arithmetic
 
@@ -1922,23 +2374,23 @@ $((a ** b))         # Power
 
 ### 🎨 Special Variables
 
-| Variable | Description |
-|----------|-------------|
-| `$0` | Script name |
-| `$1, $2, ...` | Positional parameters |
-| `$#` | Number of parameters |
-| `$@` | All parameters (as separate words) |
-| `$*` | All parameters (as single word) |
-| `$?` | Exit status of last command |
-| `$` | Process ID of script |
-| `$!` | PID of last background command |
-| `$-` | Current shell options |
-| `$_` | Last argument of previous command |
-| `$BASH_VERSION` | Bash version |
-| `$HOSTNAME` | Hostname |
-| `$RANDOM` | Random number (0-32767) |
-| `$LINENO` | Current line number |
-| `$SECONDS` | Seconds since script started |
+| Variable        | Description                        |
+| --------------- | ---------------------------------- |
+| `$0`            | Script name                        |
+| `$1, $2, ...`   | Positional parameters              |
+| `$#`            | Number of parameters               |
+| `$@`            | All parameters (as separate words) |
+| `$*`            | All parameters (as single word)    |
+| `$?`            | Exit status of last command        |
+| `$`             | Process ID of script               |
+| `$!`            | PID of last background command     |
+| `$-`            | Current shell options              |
+| `$_`            | Last argument of previous command  |
+| `$BASH_VERSION` | Bash version                       |
+| `$HOSTNAME`     | Hostname                           |
+| `$RANDOM`       | Random number (0-32767)            |
+| `$LINENO`       | Current line number                |
+| `$SECONDS`      | Seconds since script started       |
 
 ### 📝 String Operations
 
@@ -1991,6 +2443,7 @@ exec 3<&-                   # Close file descriptor 3
 ### 🔍 Test Operators
 
 #### File Tests
+
 ```bash
 -e file     # File exists
 -f file     # Regular file
@@ -2013,6 +2466,7 @@ f1 -ef f2   # f1 and f2 are same file
 ```
 
 #### String Tests
+
 ```bash
 -z string   # String is empty
 -n string   # String is not empty
@@ -2023,6 +2477,7 @@ s1 > s2     # s1 sorts after s2
 ```
 
 #### Numeric Tests
+
 ```bash
 n1 -eq n2   # Equal
 n1 -ne n2   # Not equal
@@ -2099,7 +2554,7 @@ for f in *\ *; do mv "$f" "${f// /_}"; done
 
 ## 📚 Additional Resources
 
-### *Learn More*
+### _Learn More_
 
 </div>
 
@@ -2113,13 +2568,13 @@ for f in *\ *; do mv "$f" "${f// /_}"; done
 
 ### 🛠️ Recommended Tools
 
-| Tool | Description |
-|------|-------------|
-| `shellcheck` | Static analysis tool for shell scripts |
-| `shfmt` | Shell script formatter |
-| `bats` | Bash Automated Testing System |
-| `bash-completion` | Programmable completion for bash |
-| `tldr` | Simplified man pages |
+| Tool              | Description                            |
+| ----------------- | -------------------------------------- |
+| `shellcheck`      | Static analysis tool for shell scripts |
+| `shfmt`           | Shell script formatter                 |
+| `bats`            | Bash Automated Testing System          |
+| `bash-completion` | Programmable completion for bash       |
+| `tldr`            | Simplified man pages                   |
 
 ### 📖 Books
 
@@ -2158,16 +2613,6 @@ We welcome contributions! Here's how you can help:
 
 ---
 
-<div align="center">
-
-## 📄 License
-
-This guide is released under the **MIT License**.
-
-Feel free to use, modify, and distribute!
-
----
-
 ## ⭐ Show Your Support
 
 If you found this guide helpful, please consider:
@@ -2181,7 +2626,7 @@ If you found this guide helpful, please consider:
 
 ### 🎉 Happy Scripting!
 
-*Made with ❤️ for the Bash community*
+_Made with ❤️ for the Bash community_
 
 **[⬆ Back to Top](#-complete-bash-scripting-mastery-guide)**
 
@@ -2204,6 +2649,7 @@ Bash scripting is a journey, not a destination. Every script you write teaches y
 ### 🌱 Growth Mindset
 
 Remember:
+
 - **Start Simple** - Begin with basic scripts and gradually add complexity
 - **Read Others' Code** - Learn from open-source projects and community scripts
 - **Practice Regularly** - The more you script, the more natural it becomes
@@ -2257,7 +2703,7 @@ May your scripts always execute successfully, your pipes never break, and your e
 ## 📬 Stay Connected
 
 - 💼 **LinkedIn**: Share your Bash projects
-- 🐦 **Twitter**: Join #BashScripting discussions  
+- 🐦 **Twitter**: Join #BashScripting discussions
 - 💬 **Discord/Slack**: Join Bash communities
 - 📝 **Blog**: Write about your scripting experiences
 - 🎥 **YouTube**: Watch and create Bash tutorials
@@ -2266,7 +2712,7 @@ May your scripts always execute successfully, your pipes never break, and your e
 
 ### ✍️ Author's Note
 
-*"The command line is not just a tool; it's a superpower. With Bash scripting, you're not just using your computer - you're commanding it. May this guide empower you to automate the tedious, simplify the complex, and create the extraordinary."*
+_"The command line is not just a tool; it's a superpower. With Bash scripting, you're not just using your computer - you're commanding it. May this guide empower you to automate the tedious, simplify the complex, and create the extraordinary."_
 
 ---
 
@@ -2285,7 +2731,7 @@ motivate() {
         "Simplicity is the soul of efficiency."
         "Make it work, make it right, make it fast."
     )
-    
+
     local random_index=$((RANDOM % ${#quotes[@]}))
     echo "💡 ${quotes[$random_index]}"
 }
@@ -2336,7 +2782,7 @@ echo "#!/bin/bash"
 
 ### 🎭 The End... or Rather, The Beginning!
 
-*This isn't goodbye, it's "see you in the terminal!" 😉*
+_This isn't goodbye, it's "see you in the terminal!" 😉_
 
 ---
 
@@ -2350,523 +2796,90 @@ readonly BACKUP_FILE="backup_${DATE}.tar.gz"
 readonly MAX_BACKUPS=7
 
 # Colors
+
 readonly GREEN='\033[0;32m'
 readonly RED='\033[0;31m'
 readonly YELLOW='\033[1;33m'
 readonly NC='\033[0m'
 
 # Logging
+
 log() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG_FILE"
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG_FILE"
 }
 
 success() {
-    echo -e "${GREEN}✅ $1${NC}" | tee -a "$LOG_FILE"
+echo -e "${GREEN}✅ $1${NC}" | tee -a "$LOG_FILE"
 }
 
 error() {
-    echo -e "${RED}❌ $1${NC}" | tee -a "$LOG_FILE" >&2
+echo -e "${RED}❌ $1${NC}" | tee -a "$LOG_FILE" >&2
 }
 
 warning() {
-    echo -e "${YELLOW}⚠️  $1${NC}" | tee -a "$LOG_FILE"
+echo -e "${YELLOW}⚠️  $1${NC}" | tee -a "$LOG_FILE"
 }
 
 # Cleanup function
+
 cleanup() {
-    local exit_code=$?
+local exit_code=$?
     if [ $exit_code -ne 0 ]; then
         error "Backup failed with exit code: $exit_code"
         rm -f "${BACKUP_DIR}/${BACKUP_FILE}"
-    fi
-    exit $exit_code
+fi
+exit $exit_code
 }
 
 trap cleanup EXIT
 
 # Main script
+
 main() {
-    log "Starting backup process..."
-    
+log "Starting backup process..."
+
     # Check if source exists
     if [ ! -d "$SOURCE_DIR" ]; then
         error "Source directory not found: $SOURCE_DIR"
         exit 1
     fi
-    
+
     # Create backup directory
     if [ ! -d "$BACKUP_DIR" ]; then
         log "Creating backup directory: $BACKUP_DIR"
         mkdir -p "$BACKUP_DIR"
     fi
-    
+
     # Create backup
     log "Creating backup: ${BACKUP_FILE}"
     tar -czf "${BACKUP_DIR}/${BACKUP_FILE}" "$SOURCE_DIR" 2>&1 | tee -a "$LOG_FILE"
-    
+
     # Get backup size
     size=$(du -h "${BACKUP_DIR}/${BACKUP_FILE}" | cut -f1)
     success "Backup completed: ${BACKUP_FILE} (${size})"
-    
+
     # Rotate old backups
     log "Rotating old backups (keeping last $MAX_BACKUPS)..."
     cd "$BACKUP_DIR"
     ls -t backup_*.tar.gz | tail -n +$((MAX_BACKUPS + 1)) | xargs -r rm
-    
+
     # Summary
     log "Backup summary:"
     log "  File: ${BACKUP_FILE}"
     log "  Size: ${size}"
     log "  Backups in directory: $(ls -1 backup_*.tar.gz | wc -l)"
-    
+
     success "All operations completed successfully!"
+
 }
 
 main "$@"
-```
 
-### 🔍 Example 2: Log File Analyzer
-
-```bash
-#!/bin/bash
-set -euo pipefail
-
-readonly LOGFILE="${1:-/var/log/app.log}"
-readonly OUTPUT_DIR="./reports"
-readonly REPORT_FILE="${OUTPUT_DIR}/log_report_$(date +%Y%m%d_%H%M%S).txt"
-
-# Colors
-readonly CYAN='\033[0;36m'
-readonly GREEN='\033[0;32m'
-readonly RED='\033[0;31m'
-readonly YELLOW='\033[1;33m'
-readonly BOLD='\033[1m'
-readonly NC='\033[0m'
-
-# Check if log file exists
-if [ ! -f "$LOGFILE" ]; then
-    echo -e "${RED}❌ Error: Log file not found: $LOGFILE${NC}"
-    exit 1
-fi
-
-# Create output directory
-mkdir -p "$OUTPUT_DIR"
-
-# Generate report
-{
-    echo "════════════════════════════════════════"
-    echo "         LOG ANALYSIS REPORT"
-    echo "════════════════════════════════════════"
-    echo "File: $LOGFILE"
-    echo "Generated: $(date '+%Y-%m-%d %H:%M:%S')"
-    echo "════════════════════════════════════════"
-    echo ""
-    
-    echo "📊 STATISTICS"
-    echo "────────────────────────────────────────"
-    echo "Total lines:     $(wc -l < "$LOGFILE")"
-    echo "File size:       $(du -h "$LOGFILE" | cut -f1)"
-    echo "ERROR count:     $(grep -c "ERROR" "$LOGFILE" || echo 0)"
-    echo "WARNING count:   $(grep -c "WARNING" "$LOGFILE" || echo 0)"
-    echo "INFO count:      $(grep -c "INFO" "$LOGFILE" || echo 0)"
-    echo ""
-    
-    echo "🔴 TOP 10 ERRORS"
-    echo "────────────────────────────────────────"
-    grep "ERROR" "$LOGFILE" | \
-        sed 's/.*ERROR/ERROR/' | \
-        sort | uniq -c | sort -rn | head -10
-    echo ""
-    
-    echo "⚠️  TOP 10 WARNINGS"
-    echo "────────────────────────────────────────"
-    grep "WARNING" "$LOGFILE" | \
-        sed 's/.*WARNING/WARNING/' | \
-        sort | uniq -c | sort -rn | head -10
-    echo ""
-    
-    echo "📅 ERRORS BY HOUR"
-    echo "────────────────────────────────────────"
-    grep "ERROR" "$LOGFILE" | \
-        grep -oP '\d{2}:\d{2}:\d{2}' | \
-        cut -d: -f1 | \
-        sort | uniq -c | \
-        sort -rn
-    echo ""
-    
-    echo "🔍 RECENT ERRORS (Last 5)"
-    echo "────────────────────────────────────────"
-    grep "ERROR" "$LOGFILE" | tail -5
-    
-} | tee "$REPORT_FILE"
-
-echo ""
-echo -e "${GREEN}✅ Report saved to: $REPORT_FILE${NC}"
-```
-
-### 🌐 Example 3: Website Monitor
-
-```bash
-#!/bin/bash
-set -euo pipefail
-
-readonly CONFIG_FILE="websites.txt"
-readonly LOG_FILE="monitor.log"
-readonly CHECK_INTERVAL=60
-
-# Colors
-readonly GREEN='\033[0;32m'
-readonly RED='\033[0;31m'
-readonly NC='\033[0m'
-
-log() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG_FILE"
-}
-
-check_website() {
-    local url=$1
-    local response=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "$url")
-    local exit_code=$?
-    
-    if [ $exit_code -eq 0 ] && [ "$response" -eq 200 ]; then
-        echo -e "${GREEN}✅${NC} $url - OK (HTTP $response)"
-        log "OK - $url - HTTP $response"
-        return 0
-    else
-        echo -e "${RED}❌${NC} $url - FAILED (HTTP $response, Exit: $exit_code)"
-        log "FAILED - $url - HTTP $response, Exit: $exit_code"
-        
-        # Send alert (example using mail)
-        echo "Website $url is down!" | mail -s "Alert: Website Down" admin@example.com
-        return 1
-    fi
-}
-
-main() {
-    if [ ! -f "$CONFIG_FILE" ]; then
-        echo "❌ Config file not found: $CONFIG_FILE"
-        echo "Create a file with one URL per line"
-        exit 1
-    fi
-    
-    echo "🔍 Starting website monitor..."
-    echo "📋 Reading websites from: $CONFIG_FILE"
-    echo "⏱️  Check interval: ${CHECK_INTERVAL}s"
-    echo ""
-    
-    while true; do
-        echo "────────────────────────────────────────"
-        echo "Checking websites at $(date '+%H:%M:%S')"
-        echo "────────────────────────────────────────"
-        
-        while IFS= read -r url || [ -n "$url" ]; do
-            [ -z "$url" ] && continue
-            [[ "$url" =~ ^#  ]] && continue
-            
-            check_website "$url"
-        done < "$CONFIG_FILE"
-        
-        echo ""
-        sleep "$CHECK_INTERVAL"
-    done
-}
-
-# Handle graceful shutdown
-trap 'echo ""; log "Monitor stopped"; exit 0' SIGINT SIGTERM
-
-main "$@"
-```
-
-### 🗃️ Example 4: Database Backup with Retention
-
-```bash
-#!/bin/bash
-set -euo pipefail
-
-readonly DB_NAME="myapp"
-readonly DB_USER="backup_user"
-readonly DB_PASS="secure_password"
-readonly BACKUP_DIR="/backups/database"
-readonly DATE=$(date +%Y%m%d_%H%M%S)
-readonly BACKUP_FILE="${BACKUP_DIR}/${DB_NAME}_${DATE}.sql.gz"
-readonly RETENTION_DAYS=30
-
-# S3 Configuration (optional)
-readonly S3_BUCKET="s3://my-backups/database"
-readonly ENABLE_S3_UPLOAD=true
-
-log() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*"
-}
-
-error_exit() {
-    echo "❌ ERROR: $1" >&2
-    exit 1
-}
-
-cleanup() {
-    if [ $? -ne 0 ]; then
-        log "Backup failed, cleaning up..."
-        rm -f "$BACKUP_FILE"
-    fi
-}
-
-trap cleanup EXIT
-
-main() {
-    log "Starting database backup for: $DB_NAME"
-    
-    # Create backup directory
-    mkdir -p "$BACKUP_DIR"
-    
-    # Dump database
-    log "Dumping database..."
-    mysqldump -u"$DB_USER" -p"$DB_PASS" "$DB_NAME" | gzip > "$BACKUP_FILE" || \
-        error_exit "Database dump failed"
-    
-    # Check backup size
-    size=$(du -h "$BACKUP_FILE" | cut -f1)
-    log "✅ Backup created: $BACKUP_FILE ($size)"
-    
-    # Upload to S3 (if enabled)
-    if [ "$ENABLE_S3_UPLOAD" = true ]; then
-        log "Uploading to S3..."
-        aws s3 cp "$BACKUP_FILE" "$S3_BUCKET/" || \
-            error_exit "S3 upload failed"
-        log "✅ Uploaded to S3"
-    fi
-    
-    # Clean old backups
-    log "Cleaning backups older than $RETENTION_DAYS days..."
-    find "$BACKUP_DIR" -name "${DB_NAME}_*.sql.gz" -mtime +$RETENTION_DAYS -delete
-    
-    remaining=$(find "$BACKUP_DIR" -name "${DB_NAME}_*.sql.gz" | wc -l)
-    log "✅ Cleanup complete. Remaining backups: $remaining"
-    
-    log "🎉 Backup process completed successfully!"
-}
-
-main "$@"
-```
-
-### 📊 Example 5: System Health Check
-
-```bash
-#!/bin/bash
-set -euo pipefail
-
-readonly THRESHOLD_CPU=80
-readonly THRESHOLD_MEM=85
-readonly THRESHOLD_DISK=90
-readonly ALERT_EMAIL="admin@example.com"
-
-# Colors
-readonly GREEN='\033[0;32m'
-readonly YELLOW='\033[1;33m'
-readonly RED='\033[0;31m'
-readonly NC='\033[0m'
-
-check_cpu() {
-    local cpu_usage=$(top -bn1 | grep "Cpu(s)" | awk '{print $2}' | cut -d'%' -f1)
-    local cpu_int=${cpu_usage%.*}
-    
-    echo -n "CPU Usage: ${cpu_usage}% "
-    
-    if [ "$cpu_int" -gt "$THRESHOLD_CPU" ]; then
-        echo -e "${RED}❌ HIGH${NC}"
-        return 1
-    elif [ "$cpu_int" -gt $((THRESHOLD_CPU - 10)) ]; then
-        echo -e "${YELLOW}⚠️  WARNING${NC}"
-        return 2
-    else
-        echo -e "${GREEN}✅ OK${NC}"
-        return 0
-    fi
-}
-
-check_memory() {
-    local mem_usage=$(free | grep Mem | awk '{printf "%.0f", $3/$2 * 100}')
-    
-    echo -n "Memory Usage: ${mem_usage}% "
-    
-    if [ "$mem_usage" -gt "$THRESHOLD_MEM" ]; then
-        echo -e "${RED}❌ HIGH${NC}"
-        return 1
-    elif [ "$mem_usage" -gt $((THRESHOLD_MEM - 10)) ]; then
-        echo -e "${YELLOW}⚠️  WARNING${NC}"
-        return 2
-    else
-        echo -e "${GREEN}✅ OK${NC}"
-        return 0
-    fi
-}
-
-check_disk() {
-    local alerts=0
-    
-    while IFS= read -r line; do
-        local mountpoint=$(echo "$line" | awk '{print $6}')
-        local usage=$(echo "$line" | awk '{print $5}' | tr -d '%')
-        
-        echo -n "Disk $mountpoint: ${usage}% "
-        
-        if [ "$usage" -gt "$THRESHOLD_DISK" ]; then
-            echo -e "${RED}❌ HIGH${NC}"
-            ((alerts++))
-        elif [ "$usage" -gt $((THRESHOLD_DISK - 10)) ]; then
-            echo -e "${YELLOW}⚠️  WARNING${NC}"
-        else
-            echo -e "${GREEN}✅ OK${NC}"
-        fi
-    done < <(df -h | grep -vE '^Filesystem|tmpfs|cdrom')
-    
-    return $alerts
-}
-
-check_services() {
-    local services=("nginx" "mysql" "redis")
-    local failed=0
-    
-    for service in "${services[@]}"; do
-        echo -n "Service $service: "
-        if systemctl is-active --quiet "$service"; then
-            echo -e "${GREEN}✅ Running${NC}"
-        else
-            echo -e "${RED}❌ Stopped${NC}"
-            ((failed++))
-        fi
-    done
-    
-    return $failed
-}
-
-send_alert() {
-    local message=$1
-    echo "$message" | mail -s "System Health Alert" "$ALERT_EMAIL"
-}
-
-main() {
-    echo "══════════════════════════════════════"
-    echo "     SYSTEM HEALTH CHECK"
-    echo "══════════════════════════════════════"
-    echo "Time: $(date '+%Y-%m-%d %H:%M:%S')"
-    echo "Host: $(hostname)"
-    echo "══════════════════════════════════════"
-    echo ""
-    
-    local issues=0
-    
-    check_cpu || ((issues++))
-    check_memory || ((issues++))
-    echo ""
-    check_disk || issues=$((issues + $?))
-    echo ""
-    check_services || issues=$((issues + $?))
-    
-    echo ""
-    echo "══════════════════════════════════════"
-    if [ $issues -eq 0 ]; then
-        echo -e "${GREEN}✅ All checks passed!${NC}"
-    else
-        echo -e "${RED}❌ Found $issues issue(s)${NC}"
-        send_alert "System health check found $issues issues. Check the system immediately."
-    fi
-    echo "══════════════════════════════════════"
-}
-
-main "$@"
-```
+````
 
 ---
 
 <div align="center">
-
-## 💡 Best Practices
-
-### *Write Production-Ready Scripts*
-
-</div>
-
-### ✅ Essential Best Practices
-
-1. **Always use strict mode**
-   ```bash
-   set -euo pipefail
-   ```
-
-2. **Quote your variables**
-   ```bash
-   # ❌ Wrong
-   echo $var
-   
-   # ✅ Correct
-   echo "$var"
-   ```
-
-3. **Use [[ ]] for conditions**
-   ```bash
-   # ❌ Old style
-   if [ "$var" = "value" ]; then
-   
-   # ✅ Modern Bash
-   if [[ "$var" == "value" ]]; then
-   ```
-
-4. **Check command existence**
-   ```bash
-   if ! command -v docker &> /dev/null; then
-       echo "Docker not installed"
-       exit 1
-   fi
-   ```
-
-5. **Use functions for organization**
-   ```bash
-   main() {
-       # Your main logic
-   }
-   
-   main "$@"
-   ```
-
-6. **Always add cleanup traps**
-   ```bash
-   cleanup() {
-       rm -f /tmp/myapp.*
-   }
-   trap cleanup EXIT
-   ```
-
-7. **Validate inputs**
-   ```bash
-   if [ $# -eq 0 ]; then
-       echo "Usage: $0 <argument>"
-       exit 1
-   fi
-   ```
-
-8. **Use readonly for constants**
-   ```bash
-   readonly CONFIG_FILE="/etc/myapp.conf"
-   readonly MAX_RETRIES=3
-   ```
-
-9. **Proper error messages**
-   ```bash
-   error() {
-       echo "ERROR: $1" >&2
-       exit 1
-   }
-   ```
-
-10. **Test scripts before deploying**
-    ```bash
-    # Syntax check
-    bash -n script.sh
-    
-    # Use shellcheck
-    shellcheck script.sh
-    ```
 
 ### 📚 Code Organization
 
@@ -2879,3 +2892,4 @@ set -euo pipefail
 #######################################
 readonly SCRIPT_NAME=$(basename "$0")
 readonly
+```

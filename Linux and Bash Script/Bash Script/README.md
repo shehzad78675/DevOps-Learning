@@ -482,11 +482,11 @@ fi
 <div align="center">
 
 | Feature           | `[ ]` (test)     | `[[ ]]` (bash)     |
-| ----------------- | ---------------- | ------------------ | --- | --- |
+| ----------------- | ---------------- | ------------------ |
 | POSIX Compatible  | ✅ Yes           | ❌ No              |
 | Regex Support     | ❌ No            | ✅ Yes             |
 | Pattern Matching  | ❌ No            | ✅ Yes             |
-| Logical Operators | `-a`, `-o`       | `&&`, `            |     | `   |
+| Logical Operators | `-a`, `-o`       | `&&`, `            | 
 | String Comparison | `<` needs escape | `<` works directly |
 | Word Splitting    | ⚠️ Happens       | ✅ Prevented       |
 
@@ -2310,6 +2310,8 @@ main "$@"
 
 </div>
 
+<div align="center">
+
 ### 🔧 Debugging
 
 | Command                | Description              |
@@ -2320,6 +2322,10 @@ main "$@"
 | `bash -n script.sh`    | Syntax check only        |
 | `shellcheck script.sh` | Lint script              |
 | `set -v`               | Print shell input lines  |
+
+</div>
+
+<div align="center">
 
 ### 📊 Exit Codes
 
@@ -2334,6 +2340,8 @@ main "$@"
 | `130`   | Script terminated by Ctrl+C |
 | `255`   | Exit status out of range    |
 
+</div>
+
 ```bash
 # Check last command exit status
 echo $?
@@ -2342,6 +2350,7 @@ echo $?
 exit 0    # Success
 exit 1    # Error
 ```
+<div align="center">
 
 ### 🔤 Variables
 
@@ -2364,7 +2373,13 @@ exit 1    # Error
 | `${var,}`         | Lowercase first char          |
 | `${var,,}`        | Lowercase all                 |
 
+</div>
+
+<div align="center">
+
 ### 🔢 Arithmetic
+
+</div>
 
 ```bash
 # Basic operations
@@ -2388,6 +2403,8 @@ $((a ** b))         # Power
 ((var /= 2))        # Divide and assign
 ```
 
+<div align="center">
+
 ### 🎨 Special Variables
 
 | Variable        | Description                        |
@@ -2408,7 +2425,13 @@ $((a ** b))         # Power
 | `$LINENO`       | Current line number                |
 | `$SECONDS`      | Seconds since script started       |
 
+</div>
+
+<div align="center">
+
 ### 📝 String Operations
+
+</div>
 
 ```bash
 # Length
@@ -2437,7 +2460,11 @@ ${string,}           # First char lowercase
 ${string,,}          # All lowercase
 ```
 
+<div align="center">
+
 ### 🔀 Redirections
+
+</div>
 
 ```bash
 command > file              # Redirect stdout to file
@@ -2456,7 +2483,11 @@ exec 4> file                # Open file for writing (fd 4)
 exec 3<&-                   # Close file descriptor 3
 ```
 
+<div align="center">
+
 ### 🔍 Test Operators
+
+</div>
 
 #### File Tests
 
@@ -2584,6 +2615,8 @@ for f in *\ *; do mv "$f" "${f// /_}"; done
 
 ### 🛠️ Recommended Tools
 
+<div align="center">
+
 | Tool              | Description                            |
 | ----------------- | -------------------------------------- |
 | `shellcheck`      | Static analysis tool for shell scripts |
@@ -2591,6 +2624,8 @@ for f in *\ *; do mv "$f" "${f// /_}"; done
 | `bats`            | Bash Automated Testing System          |
 | `bash-completion` | Programmable completion for bash       |
 | `tldr`            | Simplified man pages                   |
+
+</div>
 
 ### 📖 Books
 

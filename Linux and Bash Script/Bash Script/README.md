@@ -2596,20 +2596,26 @@ for f in *\ *; do mv "$f" "${f// /_}"; done
 
 We welcome contributions! Here's how you can help:
 
+</div>
+
 1. 🐛 **Report bugs** - Open an issue
 2. 💡 **Suggest features** - Share your ideas
 3. 📝 **Improve documentation** - Fix typos, add examples
 4. 🔧 **Submit pull requests** - Add new scripts or improvements
 
+---
+
+<div align="center">
+
 ### Code Style Guidelines
+
+</div>
 
 - Use 4 spaces for indentation
 - Follow the structure shown in this guide
 - Add comments for complex logic
 - Include error handling
 - Test your scripts before submitting
-
-</div>
 
 ---
 
@@ -2692,15 +2698,25 @@ Thank you for taking the time to read this guide. We hope it serves you well in 
 
 May your scripts always execute successfully, your pipes never break, and your exit codes always be zero! 😊
 
+</div>
+
 ---
+
+<div align="center">
 
 ### 🌈 Keep Scripting, Keep Learning, Keep Growing
 
 <img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="300" alt="Happy Coding">
 
+</div>
+
 ---
 
+<div align="center">
+
 ## 📬 Stay Connected
+
+</div>
 
 - 💼 **LinkedIn**: Share your Bash projects
 - 🐦 **Twitter**: Join #BashScripting discussions
@@ -2710,15 +2726,23 @@ May your scripts always execute successfully, your pipes never break, and your e
 
 ---
 
+<div align="center">
+
 ### ✍️ Author's Note
 
 _"The command line is not just a tool; it's a superpower. With Bash scripting, you're not just using your computer - you're commanding it. May this guide empower you to automate the tedious, simplify the complex, and create the extraordinary."_
 
+</div>
+
 ---
+
+<div align="center">
 
 ## 🎊 One Last Thing...
 
 Before you close this guide, here's a small gift - a motivational script:
+
+</div>
 
 ```bash
 #!/bin/bash
@@ -2747,6 +2771,23 @@ echo "════════════════════════�
 
 ---
 
+```bash
+# The journey of a thousand scripts begins with a single line
+echo "#!/bin/bash"
+
+# Now go write yours! 🚀
+```
+
+<div align="center">
+
+### 🎭 The End... or Rather, The Beginning!
+
+_This isn't goodbye, it's "see you in the terminal!" 😉_
+
+</div>
+
+---
+
 <div align="center">
 
 ### 🌟 May the Source Be With You! 🌟
@@ -2771,22 +2812,29 @@ echo "════════════════════════�
 
 ---
 
-```bash
-# The journey of a thousand scripts begins with a single line
-echo "#!/bin/bash"
-
-# Now go write yours! 🚀
-```
-
 <div align="center">
 
-### 🎭 The End... or Rather, The Beginning!
-
-_This isn't goodbye, it's "see you in the terminal!" 😉_
-
----
-
 **Version 1.0.0** | **January 2026** | **Made for the Community**
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </div> BACKUP_DIR="/backup"
 readonly SOURCE_DIR="/home/user/documents"
